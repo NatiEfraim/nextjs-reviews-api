@@ -4,19 +4,39 @@
   "info": {
     "singularName": "review",
     "pluralName": "reviews",
-    "displayName": "Review"
+    "displayName": "Review",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "title": {
       "type": "string",
       "required": true
     },
     "body": {
       "type": "blocks",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
       "required": true
     }
   }

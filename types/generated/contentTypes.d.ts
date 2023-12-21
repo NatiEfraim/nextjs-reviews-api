@@ -368,13 +368,17 @@ export interface ApiReviewReview extends Schema.CollectionType {
     singularName: 'review';
     pluralName: 'reviews';
     displayName: 'Review';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    slug: Attribute.String & Attribute.Required;
+    image: Attribute.Media;
     title: Attribute.String & Attribute.Required;
     body: Attribute.Blocks & Attribute.Required;
+    subtitle: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
